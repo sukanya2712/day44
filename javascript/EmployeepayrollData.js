@@ -1,10 +1,12 @@
 class EmployeePayrollData {
-    /**
-     * setter and getter methods
-     * validating the user inputs using regular expression
-     */
+    
 
-   
+    get id(){ 
+        return this._id;
+    }
+    set id(id){
+        this._id=id;
+    }
 
     get name() {
         return this._name;
@@ -87,7 +89,7 @@ class EmployeePayrollData {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const empDate = !this.start_date ? "undefined" :
                         this.start_date.toLocaleDateString("en-US", options);
-        return 'Name = ' + this.name + ", Gender = " + this.gender + ", ProfilePic = " +this.profilePic
+        return "id=" +this.id+"Name = " + this.name + ", Gender = " + this.gender + ", ProfilePic = " +this.profilePic
                     + ", Department = " + this.department + ", Salary = " + this.salary +
                         ", StartDate = " + empDate + ", Note = " +this.note;
     }
